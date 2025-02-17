@@ -1,0 +1,21 @@
+<div>
+    <div class="search-container">
+        <input type="text" [(ngModel)]="searchQuery" (keyup)="filterData()" placeholder="Buscar">
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let header of headers">{{ header }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td>{{ item.container }}</td>
+                <td>{{ item.tamanho }}</td>
+                <td>{{ item.cliente }}</td>
+                <td>{{ item.observacao }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
