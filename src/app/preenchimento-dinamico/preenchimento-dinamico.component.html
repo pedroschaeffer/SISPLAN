@@ -1,1 +1,9 @@
-<p>preenchimento-dinamico works!</p>
+<button (click)="adicionarConvidado()">Adicionar Convidado</button>
+
+<div *ngFor="let convidado of convidados; let i = index"> 
+  <div class="convidado">
+    <input type="text" [(ngModel)]="convidado.nome" placeholder="Nome">
+    <input type="text" [(ngModel)]="convidado.contato" placeholder="Contato">
+    <!-- <button (click)="removerConvidado(i)">Remover</button> -->
+  </div>
+</div>
